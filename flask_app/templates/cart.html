@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block banner_text %}
+<h1> Shopping Cart</h1>
+{% endblock banner_text %}
+
+{% block content %}
+    <div class="float-end mt-3 mb-3">
+        <a class="btn btn-danger" href="/logout">logout</a>
+    </div>
+    {{paintings}}
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Item</th>
+            <th scope="col">Style</th>
+            <th scope="col">Handle</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td></td>
+            {% for painting in paintings %}
+            <td>{{session.category}}</td>
+            <td><img class="fixedwidth" src="/static/images/{{painting.description}}.jpg" alt="Image"></td>
+            {% endfor %}
+        </tr>
+        </tbody>
+    </table>
+{% endblock content %}

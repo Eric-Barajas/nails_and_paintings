@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nails & Paintings</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <style>
+        .container{
+            width: 80%;
+        }
+        .navbar{
+            width: 100%;
+            text-align: center;
+        }
+        /* .equl{
+            flex: 1;
+        } */
+        .banner{
+            width: 100%;
+            height: 250px;
+            /* position: fixed;
+            top: 4rem; */
+            background-image: url("/static/images/paintings_banner.jpg");
+            -webkit-background-size: cover;
+            background-size: cover;
+            background-position: center center;
+        }
+        /* .bt-color{
+            color: rgb(153, 51, 51);
+            text-align: center;
+            align-items: center;
+        } */
+        .info_about_me{
+            background-image: url("/static/images/background_image_about_me.webp");
+            -webkit-background-size: cover;
+            background-size: cover;
+            background-position: center center;
+            color: blanchedalmond;
+        }
+        main {
+            margin-top: 20px;
+        }
+        .fixedwidth{
+            width: 150px;
+            height: 150px;
+            border-radius: 8px;
+            margin: 5px;
+        }
+        .me_pic{
+            width: 125px;
+            height: 125px;
+            border-radius: 50%;
+            margin: 5px;
+        }
+        .squish{
+            margin-top: 18px;
+        }
+        .Info{
+            margin-top: 40px;
+        }
+        .make_space{
+            margin-top: 4px;
+            margin-bottom: 12px;
+        }
+        .three_icons{
+            width: 24px;
+            height: 24px;
+        }
+        li {
+            list-style: none;
+        }
+        .search_bar{
+            width: 800px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+        <div class="container">
+            <a href="/" class="navbar-brand">NAME OF SITE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <form action="/action_page.php">
+                <input type="text" placeholder="Search.." name="search">
+                <a href=""><i class="bi bi-search"></i></a>
+            </form>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/"><i class="bi bi-house-door"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/register"><i class="bi bi-door-open"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/cart"><i class="bi bi-cart3"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    {# banner here #}
+    <div class="container-fluid banner">
+        {% block banner_text %}
+        {% endblock banner_text %}
+    </div>
+    <main class="container">
+        {% block content %}
+        {% endblock content %}
+    </main>
+</body>
+</html>

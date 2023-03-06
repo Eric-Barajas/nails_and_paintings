@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+
+{% block banner_text %}
+<h1 class="bt-color text-danger text-center">Welcome</h1>
+{% endblock banner_text %}
+
+{% block content %}
+<div>
+    <!-- doesnt know what nails are -->
+<!-- paintings in jinja tags -->
+    <!-- does know what paintings are -->
+    <div class="d-flex">
+        <div class="col">
+            <div>
+                <h1>Nails</h1>
+                <form action="/nails/filter" method="post">
+                    <select name="shape" id="nails">
+                        <option value="square">Square</option>
+                        <option value="round">Round</option>
+                        <option value="oval">Oval</option>
+                        <option value="squoval">Squoval</option>
+                        <option value="pointed">Pointed</option>
+                    </select>
+                    <button>filter</button>
+                </form>
+            </div>
+            <div>
+                <div class="resize d-flex justify-content-evenly squish flex-wrap">
+                    {% for nail in nails %}
+                    <div>
+                        <div>
+                            <img class="fixedwidth" src="/static/images/{{nail.description}}.jpg" alt="Image">
+                        </div>
+                        <div>
+                            <a class="btn btn-danger" href="#">Buy</a>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <!-- <div class="resize d-flex justify-content-evenly squish">
+                    <img class="fixedwidth" src="/static/images/sqaure_nails.webp" alt="Image">
+                    <img class="fixedwidth" src="/static/images/square_nails_2.jpg" alt="Image">
+                    <img class="fixedwidth" src="/static/images/sqaure_nails.webp" alt="Image">
+                </div>
+                <div class="resize d-flex justify-content-evenly squish">
+                    <img class="fixedwidth" src="/static/images/square_nails_3.jpg" alt="Image">
+                    <img class="fixedwidth" src="/static/images/square_nails_4.jpg" alt="Image">
+                    <img class="fixedwidth" src="/static/images/square_nails_3.jpg" alt="Image">
+                </div> -->
+            </div>
+        </div>
+        <div class="col">
+            <div>
+                <h1>Paintings</h1>
+                <form action="/paintings/filter" method="post">
+                    <select name="category" id="paintings">
+                        <option value="drawing">Drawings</option>
+                        <option value="watercolor">Water Color</option>
+                        <option value="realism">Realism</option>
+                        <option value="surrealism">Surrealism</option>
+                        <option value="Oil">Oil</option>
+                    </select>
+                    <button>filter</button>
+                </form>
+            </div>
+            <div>
+                <div class="resize d-flex justify-content-evenly squish flex-wrap">
+                    {% for painting in paintings %}
+                    <div>
+
+                        <div>
+                            <img class="fixedwidth" src="/static/images/{{painting.description}}.jpg" alt="Image">
+                        </div>
+                        <div>
+                            <a class="btn btn-danger" href="/painting/add/{{painting.id}}">Buy</a>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <!-- <div class="resize d-flex justify-content-evenly squish">
+                    <img class="fixedwidth" src="/static/images/drawings_3.jpg" alt="Image">
+                    <img class="fixedwidth" src="/static/images/drawings_4.jpg" alt="Image">
+                    <img class="fixedwidth" src="/static/images/drawings_3.jpg" alt="Image">
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <div class="d-flex Info">
+        <div class="flex-2">
+            <h1>Reviews:</h1>
+            <div class="row">
+                {% for i in range(3)  %}
+                <div>
+                    <img class="fixedwidth" src="/static/images/reviewer_1.jpg" alt="user"> 
+                    <span>blah blah words words words yay hooray Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus</span>
+                </div>
+                {% endfor %}
+            </div>
+            <!-- <div class="row d-flex">
+                <img class="fixedwidth" src="/static/images/reviewer_2.jpg" alt="user">
+                <p>Yesterday I wasn't an idiot, now give me my ice cream back monkey boy.</p>
+                <img class="fixedwidth" src="/static/images/reviewer_2.jpg" alt="user">
+                <p>Yesterday I wasn't an idiot, now give me my ice cream back monkey boy.</p>
+            </div> -->
+        </div>
+        <div class="flex-1 info_about_me">
+            <h1>About Me</h1>
+            <h5>Hi, my name is ____. I am a 20 years old college student. I was born outside of the states but grew up in the Bay Area.</p>
+            <img class="me_pic" src="/static/images/about_me_pic.jpg" alt="Me">
+        </div>
+    </div>
+</div>
+{% endblock content %}
