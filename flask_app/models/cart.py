@@ -25,7 +25,7 @@ class Cart:
         results = connectToMySQL(DATABASE).query_db(query, data)
         pprint(results)
         paintings = []
-        for painting in results:
+        for painting in paintings:
             temp_painting = {
                 'id' : painting['paintings.id'],
                 'title' : painting['title'],

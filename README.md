@@ -50,15 +50,15 @@ ___
 ## Functionality
 You first Log in or make an account 
 
-<img src="https://github.com/Purposefully/PurposefulGroups/blob/main/images/survey_question.png?raw=true" alt="Survey questions" width="500">  
+<img src="./flask_app/static/images/login-registration.png" alt="login/registration page" width="500">  
 
 You browse the items and select add whatever item you want to your cart
 
-<img src="https://github.com/Purposefully/PurposefulGroups/blob/main/images/choose_file.png?raw=true" alt="Choose a data file" width="500">  
+<img src="./flask_app/static/images/dropdown.gif" alt="Choose a data file" width="500">  
 
-You can click on the cart icon to see the list of items you have added to your cart 
+<!-- You can click on the cart icon to see the list of items you have added to your cart 
 
-<img src="https://github.com/Purposefully/PurposefulGroups/blob/main/images/teacher_options.png?raw=true" alt="Teacher Options" width="500">  
+<img src="https://github.com/Purposefully/PurposefulGroups/blob/main/images/teacher_options.png?raw=true" alt="Teacher Options" width="500">   -->
 
 [Return to Table of Contents](#Table-of-Contents)
 
