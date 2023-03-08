@@ -56,9 +56,9 @@ You browse the items and select add whatever item you want to your cart
 
 <img src="./flask_app/static/images/dropdown.gif" alt="Choose a data file" width="500">  
 
-<!-- You can click on the cart icon to see the list of items you have added to your cart 
+You can click on the cart icon to see the list of items you have added to your cart 
 
-<img src="https://github.com/Purposefully/PurposefulGroups/blob/main/images/teacher_options.png?raw=true" alt="Teacher Options" width="500">   -->
+<img src="./flask_app/static/images/cart.gif" alt="Items in cart" width="500">  
 
 [Return to Table of Contents](#Table-of-Contents)
 

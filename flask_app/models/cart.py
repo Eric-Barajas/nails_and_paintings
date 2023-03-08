@@ -21,7 +21,9 @@ class Cart:
 
     @classmethod
     def show_items_in_cart(cls, data):
-        query = "SELECT * FROM carts JOIN paintings_has_cart ON carts.id = paintings_has_cart.cart_id JOIN paintings ON paintings_has_cart.painting_id = paintings.id WHERE carts.id = %(id)s ;"
+        query = "SELECT * FROM users LEFT JOIN paintings ON users.id = paintings.user_id WHERE users.id = %(id)s;"
+        # query = "SELECT * FROM carts JOIN users ON users.id = carts.user_id JOIN paintings JOIN carts ON carts.id = paintings.cart_id WHERE carts.id = %(id)s;"
+        # query = "SELECT * FROM carts JOIN paintings ON paintings.id = paintings_has_cart.cart_id JOIN paintings ON paintings_has_cart.painting_id = paintings.id WHERE carts.id = %(id)s ;"
         results = connectToMySQL(DATABASE).query_db(query, data)
         pprint(results)
         paintings = []
